@@ -1,5 +1,6 @@
 import 'package:co/second_page.dart';
 import 'package:co/list_page.dart';
+import 'package:co/youTube.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatelessWidget {
@@ -43,6 +44,15 @@ class FirstPage extends StatelessWidget {
                   );
                 },
                 child: Text('リストを表示'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => YouTubePage()),
+                  );
+                },
+                child: Text('岸本ちゃんねる'),
               ),
             ],
           ),
