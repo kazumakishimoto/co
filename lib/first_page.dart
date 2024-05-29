@@ -1,4 +1,5 @@
 import 'package:co/second_page.dart';
+import 'package:co/list_page.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatelessWidget {
@@ -10,7 +11,7 @@ class FirstPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ファースト'),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Padding(
@@ -32,7 +33,16 @@ class FirstPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => SecondPage(nameText)),
                   );
                 },
-                child: Text('次の画面へ'),
+                child: Text('入力完了'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ListPage()),
+                  );
+                },
+                child: Text('リストを表示'),
               ),
             ],
           ),
